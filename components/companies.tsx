@@ -5,8 +5,6 @@ import logo3 from '@/public/images/companies/3.svg'
 import logo4 from '@/public/images/companies/4.svg'
 import logo5 from '@/public/images/companies/5.svg'
 import logo6 from '@/public/images/companies/6.svg'
-import logo7 from '@/public/images/companies/7.svg'
-import logo8 from '@/public/images/companies/8.svg'
 import ExportedImage from 'next-image-export-optimizer'
 
 export default function Companies() {
@@ -16,8 +14,6 @@ export default function Companies() {
     { src: logo4, alt: 'JLL' },
     { src: logo5, alt: 'DMG MORI' },
     { src: logo6, alt: 'Golding' },
-    { src: logo7, alt: 'Munich Consulting Group' },
-    { src: logo8, alt: 'DIEHL Defence' },
   ]
 
   return (
