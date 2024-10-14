@@ -51,7 +51,7 @@ export default function Carousel() {
               }}
               className="inline-block text-transparent"
             >
-              In minutes
+              in minutes
             </span>
           </h3>
           <p className="text-lg">
