@@ -1,6 +1,5 @@
 import { gradientStyle } from '@/lib/contants'
 import { basePath } from '@/next.config.mjs'
-import logo1 from '@/public/images/companies/1.svg'
 import logo2 from '@/public/images/companies/2.svg'
 import logo3 from '@/public/images/companies/3.svg'
 import logo4 from '@/public/images/companies/4.svg'
@@ -12,7 +11,6 @@ import ExportedImage from 'next-image-export-optimizer'
 
 export default function Companies() {
   const logos = [
-    { src: logo1, alt: 'Helmholtz Munich' },
     { src: logo2, alt: 'Colliers' },
     { src: logo3, alt: 'IAC' },
     { src: logo4, alt: 'JLL' },
