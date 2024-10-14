@@ -1,9 +1,9 @@
 import { gradientStyle } from '@/lib/contants'
 import { basePath } from '@/next.config.mjs'
-import logo2 from '@/public/images/companies/1.svg'
-import logo3 from '@/public/images/companies/2.svg'
-import logo4 from '@/public/images/companies/3.svg'
-import logo5 from '@/public/images/companies/4.svg'
+import logo1 from '@/public/images/companies/1.svg'
+import logo2 from '@/public/images/companies/2.svg'
+import logo3 from '@/public/images/companies/3.svg'
+import logo4 from '@/public/images/companies/4.svg'
 import logo6 from '@/public/images/companies/6.svg'
 import ExportedImage from 'next-image-export-optimizer'
 
