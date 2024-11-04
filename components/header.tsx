@@ -1,3 +1,4 @@
+
 import { basePath } from '@/next.config.mjs'
 import bg from '@/public/images/header/background.png'
 import logo from '@/public/images/logo.svg'
@@ -8,7 +9,7 @@ export default function Header() {
   return (
     <header className="relative overflow-hidden h-[48rem]">
       <ExportedImage
-        className="absolute object-cover top-0 left-0 w-full h-full"
+        className="absolute object-cover w-full h-full"
         src={bg}
         alt="background"
       />
@@ -17,9 +18,9 @@ export default function Header() {
         <ExportedImage src={logo} alt="Purpose" basePath={basePath} />
       </div>
       <div className="z-10 flex h-full justify-center relative mt-6">
-        <div className="flex flex-col lg:flex-row lg:w-9/12 justify-center items-center gap-16 h-full">
+        <div className="flex flex-col lg:flex-row lg:w-9/12 justify-center items-center gap-16 h-12.5">
           <div className="px-6 md:px-auto md:w-9/12 lg:6/12">
-            <h1 className="text-4xl font-bold leading-normal lg:leading-relaxed lg:text-6xl text-slate-50">
+            <h1 className="text-4xl font-bold leading-normal lg:leading-relaxed lg:text-12xl text-slate-50">
               Stop searching—
               <br className="hidden lg:block" />
               start discovering a fulfilling career.
