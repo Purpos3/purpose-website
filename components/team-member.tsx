@@ -11,14 +11,13 @@ interface Props {
 export default function TeamMember({ name, title, imageSrc }: Props) {
   return (
     <div className="flex flex-col justify-start items-center gap-4">
-      <div className="rounded-full overflow-hidden relative w-40 h-40 border-white border-1">
-        {/* Apply the grayscale filter using the 'profile-picture' class */}
+      {/* Apply the grayscale filter on the wrapper div */}
+      <div className="rounded-full overflow-hidden relative w-40 h-40 border-white border-1 profile-picture">
         <ExportedImage 
           src={imageSrc} 
           alt={name} 
           fill 
           basePath={basePath} 
-          className="profile-picture" // Add this class
         />
       </div>
       <div className="flex flex-col justify-center items-center text-center">
