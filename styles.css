@@ -60,3 +60,13 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+/* grayscale filter */
+.profile-picture {
+  filter: grayscale(100%);
+}
+
+/* hover effect to restore color */
+.profile-picture:hover {
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
