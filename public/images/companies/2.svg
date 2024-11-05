@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="68" height="39" fill="none">
-  <path fill="url(#a)" d="M0 0h68v39H0z"/>
   <defs>
     <pattern id="a" width="1" height="1" patternContentUnits="objectBoundingBox">
-      <use xlink:href="#b" transform="matrix(.00065 0 0 .00116 -.04 -.085)"/>
+      <use href="#b" transform="matrix(.00065 0 0 .00116 -.04 -.085)"/>
     </pattern>
-    <image xlink:href="data:image/svg+xml;base64,[ENCODED_SVG_DATA_FOR_FIRST_LOGO]"/>
+    <image id="b" width="1536" height="1024" href="data:image/png;base64,iVBORw0K..."/>
   </defs>
+  <rect width="68" height="39" fill="url(#a)"/>
 </svg>
