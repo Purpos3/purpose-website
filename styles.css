@@ -64,10 +64,10 @@ footer {
 /* grayscale filter */
 .profile-picture {
   filter: grayscale(100%);
+  transition: filter 0.3s ease; /* Move transition here */
 }
 
 /* hover effect to restore */
 .profile-picture:hover {
   filter: grayscale(0%);
-  transition: filter 0.3s ease;
 }
