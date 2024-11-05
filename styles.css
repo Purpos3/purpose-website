@@ -63,11 +63,11 @@ footer {
 
 /* Grayscale filter applied to images */
 .profile-picture img {
-  filter: grayscale(100%);
+  filter: grayscale(100%) !important;
   transition: filter 0.3s ease;
 }
 
 /* Hover effect to restore color */
 .profile-picture:hover img {
-  filter: grayscale(0%);
+  filter: grayscale(0%) !important;
 }
