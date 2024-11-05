@@ -61,13 +61,13 @@ footer {
   }
 }
 
-/* grayscale filter */
-.profile-picture {
+/* Target the img inside .profile-picture */
+.profile-picture img {
   filter: grayscale(100%);
-  transition: filter 0.3s ease; /* Move transition here */
+  transition: filter 0.3s ease;
 }
 
-/* hover effect to restore */
-.profile-picture:hover {
+/* Hover effect to restore color */
+.profile-picture:hover img {
   filter: grayscale(0%);
 }
