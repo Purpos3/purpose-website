@@ -61,7 +61,7 @@ footer {
   }
 }
 
-/* Target the img inside .profile-picture */
+/* Grayscale filter applied to images */
 .profile-picture img {
   filter: grayscale(100%);
   transition: filter 0.3s ease;
