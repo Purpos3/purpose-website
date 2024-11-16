@@ -22,6 +22,11 @@ const TEAM_MEMBERS = [
     imageSrc: lf,
   },
   {
+    name: 'Mieszko Chowaniec',
+    title: 'Backend Engineer',
+    imageSrc: mc,
+  },
+  {
     name: 'Wael Feriz',
     title: 'Machine Learning Engineer',
     imageSrc: wf,
@@ -30,11 +35,6 @@ const TEAM_MEMBERS = [
     name: 'Gaby Tatters',
     title: 'Mobile Designer',
     imageSrc: gt,
-  },
-  {
-    name: 'Mieszko Chowaniec',
-    title: 'Backend Engineer',
-    imageSrc: mc,
   },
   {
     name: 'Kaouther Mefteh',
