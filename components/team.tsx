@@ -2,7 +2,6 @@ import { basePath } from '@/next.config.mjs'
 import bg from '@/public/images/team/bg2.png'
 import gk from '@/public/images/team/gk.jpeg'
 import gt from '@/public/images/team/gt.png'
-import ic from '@/public/images/team/ic.jpeg'
 import km from '@/public/images/team/km.jpeg'
 import lf from '@/public/images/team/lf.jpeg'
 import mc from '@/public/images/team/mc.jpeg'
@@ -46,11 +45,6 @@ const TEAM_MEMBERS = [
     name: 'Shatabdi Biswas',
     title: 'Product Designer',
     imageSrc: sb,
-  },
-  {
-    name: 'Ismail Cherri',
-    title: 'Frontend Engineer',
-    imageSrc: ic,
   },
 ]
 
