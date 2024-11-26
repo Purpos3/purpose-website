@@ -2837,7 +2837,7 @@ __metadata:
     eslint-config-next: "npm:14.2.14"
     lucide-react: "npm:^0.451.0"
     next: "npm:14.2.14"
-    next-image-export-optimizer: "npm:^1.15.1"
+    next-image-export-optimizer: "npm:^1.18.0"
     next-themes: "npm:^0.3.0"
     postcss: "npm:^8"
     prettier: "npm:^3.3.3"
@@ -3635,18 +3635,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-image-export-optimizer@npm:^1.15.1":
-  version: 1.15.1
-  resolution: "next-image-export-optimizer@npm:1.15.1"
+"next-image-export-optimizer@npm:^1.18.0":
+  version: 1.18.0
+  resolution: "next-image-export-optimizer@npm:1.18.0"
   dependencies:
     sharp: "npm:^0.33.1"
     typescript: "npm:^5.2.2"
   peerDependencies:
-    next: ">=13.1.0"
-    react: ^18.0.0-0
+    next: ^14.2.18 || ^15.0.3
+    react: ^18.2.0 || ^19.0.0-0
   bin:
     next-image-export-optimizer: dist/optimizeImages.js
-  checksum: 10/bbc1a1da5c71b3403e6a25fa3b12502b4a5e6a075a5689d158bae0e5947eb9700b175690ae372e7f4b634e2ab8a5d73c6580ae1ec33d0b17b85a45af16f9eca2
+  checksum: 10/68bba18722fc64c0f92cbab05a79c159cd543254b60834d7cfc6204acf7e5e9ffc44ba23ff36ac8fd3a58b9555520419f55a5c12bfcc69ad3aec18a041ca6283
   languageName: node
   linkType: hard
 

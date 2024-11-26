@@ -5,7 +5,6 @@ import gt from '@/public/images/team/gt.png'
 import km from '@/public/images/team/km.jpeg'
 import lf from '@/public/images/team/lf.jpeg'
 import mc from '@/public/images/team/mc.jpeg'
-import sb from '@/public/images/team/sb.jpeg'
 import wf from '@/public/images/team/wf.jpeg'
 import ExportedImage from 'next-image-export-optimizer'
 import TeamMember from './team-member'
@@ -40,11 +39,6 @@ const TEAM_MEMBERS = [
     name: 'Kaouther Mefteh',
     title: 'Mobile Engineer',
     imageSrc: km,
-  },
-  {
-    name: 'Shatabdi Biswas',
-    title: 'Product Designer',
-    imageSrc: sb,
   },
 ]
 
