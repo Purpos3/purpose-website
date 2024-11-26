@@ -27,7 +27,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: 'Wael Feriz',
-    title: 'Machine Learning',
+    title: 'AI',
     imageSrc: wf,
   },
   {
