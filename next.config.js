@@ -1,10 +1,6 @@
-const isProd = process.env.NODE_ENV === 'production'
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
+module.exports = {
   transpilePackages: ["next-image-export-optimizer"],
-  basePath: '',
   images: {
     loader: 'custom',
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -17,8 +13,4 @@ const nextConfig = {
     nextImageExportOptimizer_storePicturesInWEBP: "true",
     nextImageExportOptimizer_exportFolderName: "nextImageExportOptimizer",
   },
-}
-
-// Use ES Module syntax
-export default nextConfig
-export const basePath = nextConfig.basePath
+} 
