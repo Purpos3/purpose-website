@@ -17,7 +17,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: 'Lukas Faber',
-    title: 'Business Ops',
+    title: 'Business (Ops)',
     imageSrc: lf,
   },
   {
@@ -44,7 +44,7 @@ const TEAM_MEMBERS = [
 
 export default function Team() {
   return (
-    <div className="relative team-wrapper">
+    <div className="relative">
       <ExportedImage
         className="absolute object-cover top-0 left-0 w-full h-full"
         src={bg}
@@ -56,13 +56,14 @@ export default function Team() {
           Founding Team
         </h3>
       </div>
-      <div className="p-8 md:p-16 z-10 relative grid">
+      <div className="p-8 md:p-16 z-10 relative grid gap-9 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:max-w-9/12">
         {TEAM_MEMBERS.map((t) => (
-          <div className="team-member" key={t.name}>
-            <img src={t.imageSrc} alt={`${t.name}'s profile`} />
-            <h4>{t.name}</h4>
-            <p>{t.title}</p>
-          </div>
+          <TeamMember
+            name={t.name}
+            title={t.title}
+            imageSrc={t.imageSrc}
+            key={t.name + t.title}
+          />
         ))}
       </div>
     </div>
