@@ -22,22 +22,22 @@ const TEAM_MEMBERS = [
   },
   {
     name: 'Mieszko Chowaniec',
-    title: 'Backend Engineer',
+    title: 'Backend',
     imageSrc: mc,
   },
   {
     name: 'Wael Feriz',
-    title: 'ML Engineer',
+    title: 'Machine Learning',
     imageSrc: wf,
   },
   {
     name: 'Gaby Tatters',
-    title: 'Designer',
+    title: 'Design',
     imageSrc: gt,
   },
   {
     name: 'Kaouther Mefteh',
-    title: 'Mobile Engineer',
+    title: 'Mobile',
     imageSrc: km,
   },
 ]
