@@ -12,12 +12,12 @@ import TeamMember from './team-member'
 const TEAM_MEMBERS = [
   {
     name: 'Gregor Kobilarov',
-    title: 'Tech Co-Founder',
+    title: 'Co-Founder [Tech]',
     imageSrc: gk,
   },
   {
     name: 'Lukas Faber',
-    title: 'Business Co-Founder',
+    title: 'Co-Founder [Business]',
     imageSrc: lf,
   },
   {
