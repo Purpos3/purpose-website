@@ -18,6 +18,7 @@ const nextConfig = {
   },
 }
 
-export const basePath = nextConfig.basePath
-
-export default nextConfig
+// Use module.exports for .js files
+module.exports = nextConfig
+// Export basePath for use in components
+module.exports.basePath = nextConfig.basePath
