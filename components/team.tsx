@@ -27,12 +27,12 @@ const TEAM_MEMBERS = [
   },
   {
     name: 'Wael Feriz',
-    title: 'Machine Learning Engineer',
+    title: 'ML Engineer',
     imageSrc: wf,
   },
   {
     name: 'Gaby Tatters',
-    title: 'Mobile Designer',
+    title: 'Designer',
     imageSrc: gt,
   },
   {
