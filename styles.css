@@ -13,32 +13,83 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #110c2a; /* Added background color */
-}
-
-/* Wrapper to control content width and alignment */
-.content-wrapper {
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto; /* Add this line to center the content */
-  background-color: #110c2a; /* Added background color */
-}
-
-/* Description text styling */
-.description {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  color: white; /* Ensure text is white */
-  background-color: #110c2a; /* Added background color */
-}
-
-/* Video styling */
-video {
-  width: 100%;
-  max-width: 500px;
   background-color: #110c2a;
+}
+
+/* Wrapper for the team section */
+.team-wrapper {
+  padding: 20px;
+  text-align: center;
+  background-color: #110c2a;
+}
+
+/* Team Member Card Styling */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent for styling */
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05); /* Add a subtle hover effect */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Team member image styling */
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.team-member:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+/* Name styling */
+.team-member h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Title styling */
+.team-member p {
+  margin: 0;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevent line wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add "..." if the text overflows */
+}
+
+/* Grid styling for responsive layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to one column */
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* Four columns on large screens */
+  }
 }
 
 /* Footer styling */
@@ -50,24 +101,8 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile-specific adjustments */
 @media (max-width: 768px) {
-  .description {
-    font-size: 1rem;
-  }
-
   footer {
     font-size: 0.8rem;
   }
-}
-
-/* Grayscale filter applied to images */
-.profile-picture img {
-  filter: grayscale(100%) !important;
-  transition: filter 0.3s ease;
-}
-
-/* Hover effect to restore color */
-.profile-picture:hover img {
-  filter: grayscale(0%) !important;
 }
