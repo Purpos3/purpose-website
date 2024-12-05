@@ -9,11 +9,11 @@ import ExportedImage from 'next-image-export-optimizer'
 
 export default function Companies() {
   const logos = [
-    { src: logo1, alt: 'Colliers' },
-    { src: logo2, alt: 'Telekom' },
-    { src: logo3, alt: 'MAN' },
-    { src: logo4, alt: 'JLL' },
-    { src: logo6, alt: 'FAZ' },
+    { src: logo1, alt: 'Roland Berger' },
+    { src: logo2, alt: 'Commerzbank' },
+    { src: logo3, alt: 'Telekom' },
+    { src: logo4, alt: 'Stellantis' },
+    { src: logo6, alt: 'Helmholtz' },
   ]
 
   return (
