@@ -1,8 +1,7 @@
 // step-image.tsx
 'use client';
 
-import { basePath } from '@/next.config.mjs';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 
 interface Props {
@@ -17,11 +16,10 @@ export default function StepImage({ imageSrc, active }: Props) {
 
   return (
     <div className="flex justify-center items-center w-[250px] h-[500px]"> {/* Adjusted container size */}
-      <ExportedImage
+      <Image
         src={imageSrc}
         alt="Step Image"
         className="object-contain w-full h-full"
-        basePath={basePath}
       />
     </div>
   );

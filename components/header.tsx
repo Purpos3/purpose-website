@@ -1,21 +1,19 @@
-
-import { basePath } from '@/next.config.mjs'
+import Image from 'next/image'
 import bg from '@/public/images/header/background.png'
 import logo from '@/public/images/logo.svg'
-import ExportedImage from 'next-image-export-optimizer'
 import AppMockup from './app-mockup'
 
 export default function Header() {
   return (
     <header className="relative overflow-hidden h-[48rem]">
-      <ExportedImage
+      <Image
         className="absolute object-cover w-full h-full"
         src={bg}
         alt="background"
       />
 
       <div className="z-10 relative flex justify-start items-center px-6 pt-6">
-        <ExportedImage src={logo} alt="Purpose" basePath={basePath} />
+        <Image src={logo} alt="Purpose" />
       </div>
       <div className="z-10 flex h-full justify-center relative mt-6">
         <div className="flex flex-col lg:flex-row lg:w-9/12 justify-center items-center gap-16 h-12.5">
