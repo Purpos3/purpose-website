@@ -32,23 +32,24 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_DOCKER: true
           VALIDATE_GITHUB_ACTIONS: true
-          FILTER_REGEX_EXCLUDE: 'node_modules/|vendor/' # Ignore common dirs that don't need linting
+          FILTER_REGEX_EXCLUDE: 'node_modules/|vendor/'
 
   build:
     runs-on: ubuntu-latest
-    needs: lint  # Ensure linting completes successfully before building
+    needs: lint
 
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-        uses: actions/setup-node@v3
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
         with:
-          node-version: '18.17.0' # Updated to meet Next.js requirements
+          node-version: '18.18.0'
+          cache: 'yarn'
 
       - name: Install Dependencies 🔧
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v5
@@ -59,7 +60,6 @@ jobs:
         run: yarn build
 
       - name: Upload artifact 📡
-        id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
           path: out/
