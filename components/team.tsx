@@ -34,11 +34,6 @@ const TEAM_MEMBERS = [
     title: 'Design',
     imageSrc: gt,
   },
-  {
-    name: 'Kaouther Mefteh',
-    title: 'Mobile',
-    imageSrc: km,
-  },
 ]
 
 export default function Team() {
