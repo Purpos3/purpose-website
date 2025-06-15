@@ -30,11 +30,9 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_DOCKER: true
-          VALIDATE_GITHUB_ACTIONS: true
           VALIDATE_TYPESCRIPT_ES: false
           VALIDATE_TYPESCRIPT_STANDARD: false
-          FILTER_REGEX_EXCLUDE: 'node_modules/|vendor/'
+          FILTER_REGEX_EXCLUDE: 'node_modules/|vendor/|\.next/'
 
   build:
     runs-on: ubuntu-latest
