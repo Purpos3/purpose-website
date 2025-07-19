@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "YOUR_TEAM_ID.com.purposehr.app",
+        "appID": "859F89AQ7T.purpose.app.hr.PurposeHR",
         "paths": ["/auth/*"]
       }
     ]
