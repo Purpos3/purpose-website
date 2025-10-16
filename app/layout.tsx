@@ -1,11 +1,20 @@
 import type { Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
+import { Poppins, DM_Sans } from 'next/font/google'
 import './globals.css'
+import Footer from '@/components/shared/Footer'
 
-// If loading a variable font, you don't need to specify the font weight
-const dmSans = DM_Sans({
+const poppins = Poppins({
+  weight: ['600', '700'],
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-poppins',
+})
+
+const dmSans = DM_Sans({
+  weight: '700',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-dm-sans',
 })
 
 export const metadata: Metadata = {
@@ -20,8 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} flex flex-col min-h-screen`}>
-        {children}
+      <body className={`${poppins.variable} ${dmSans.variable} ${poppins.className} flex flex-col min-h-screen`}>
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   )
