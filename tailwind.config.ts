@@ -77,11 +77,11 @@ const config: Config = {
         'fade-in-delay-1': 'fadeIn 0.8s ease-out 0.1s forwards',
         'fade-in-delay-2': 'fadeIn 0.8s ease-out 0.2s forwards',
         'fade-in-delay-3': 'fadeIn 0.8s ease-out 0.3s forwards',
-        'fade-in-slow': 'fadeInSlow 1.5s ease-out forwards',
-        'fade-in-slow-1': 'fadeInSlow 1.5s ease-out 0.1s forwards',
-        'fade-in-slow-2': 'fadeInSlow 1.5s ease-out 0.2s forwards',
-        'fade-in-slow-3': 'fadeInSlow 1.5s ease-out 0.3s forwards',
-        'fade-in-slow-4': 'fadeInSlow 1.5s ease-out 0.4s forwards',
+        'fade-in-slow': 'fadeInSlow 1.5s ease-out forwards, float1 8s ease-in-out 1.5s infinite',
+        'fade-in-slow-1': 'fadeInSlow 1.5s ease-out 0.1s forwards, float2 7s ease-in-out 1.6s infinite',
+        'fade-in-slow-2': 'fadeInSlow 1.5s ease-out 0.2s forwards, float3 9s ease-in-out 1.7s infinite',
+        'fade-in-slow-3': 'fadeInSlow 1.5s ease-out 0.3s forwards, float4 8.5s ease-in-out 1.8s infinite',
+        'fade-in-slow-4': 'fadeInSlow 1.5s ease-out 0.4s forwards, float1 7.5s ease-in-out 1.9s infinite',
         'draw-ellipse': 'drawEllipse 1.2s ease-out 0.2s forwards',
         'typewriter': 'typewriter 1.2s steps(80) 0.3s forwards, blinkCursor 0.8s step-end infinite',
       },
@@ -109,6 +109,26 @@ const config: Config = {
         blinkCursor: {
           '0%, 100%': { borderColor: 'transparent' },
           '50%': { borderColor: '#5E60FF' },
+        },
+        float1: {
+          '0%, 100%': { transform: 'translate(0, 0) rotate(134.213deg)' },
+          '33%': { transform: 'translate(15px, -20px) rotate(134.213deg)' },
+          '66%': { transform: 'translate(-10px, 10px) rotate(134.213deg)' },
+        },
+        float2: {
+          '0%, 100%': { transform: 'translate(0, 0) rotate(134.213deg)' },
+          '33%': { transform: 'translate(-20px, 15px) rotate(134.213deg)' },
+          '66%': { transform: 'translate(10px, -15px) rotate(134.213deg)' },
+        },
+        float3: {
+          '0%, 100%': { transform: 'translate(0, 0) rotate(134.213deg)' },
+          '33%': { transform: 'translate(10px, 20px) rotate(134.213deg)' },
+          '66%': { transform: 'translate(-15px, -10px) rotate(134.213deg)' },
+        },
+        float4: {
+          '0%, 100%': { transform: 'translate(0, 0) rotate(134.213deg)' },
+          '33%': { transform: 'translate(-15px, -15px) rotate(134.213deg)' },
+          '66%': { transform: 'translate(20px, 10px) rotate(134.213deg)' },
         },
       },
       backdropBlur: {
