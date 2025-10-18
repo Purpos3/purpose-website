@@ -156,3 +156,321 @@
   margin: 0;
   line-height: 2rem; /* Adjust this value to match your text height */
 }
+
+@keyframes flowGradient {
+  0% {
+    stop-color: #120C2B;
+  }
+  50% {
+    stop-color: #5323E5;
+  }
+  100% {
+    stop-color: #120C2B;
+  }
+}
+
+@keyframes moveAlongPath1 {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    offset-distance: 5%;
+    opacity: 1;
+  }
+  95% {
+    offset-distance: 95%;
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath2 {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    offset-distance: 5%;
+    opacity: 1;
+  }
+  95% {
+    offset-distance: 95%;
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath3 {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    offset-distance: 5%;
+    opacity: 1;
+  }
+  95% {
+    offset-distance: 95%;
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath4 {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    offset-distance: 5%;
+    opacity: 1;
+  }
+  95% {
+    offset-distance: 95%;
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath5 {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    offset-distance: 5%;
+    opacity: 1;
+  }
+  95% {
+    offset-distance: 95%;
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath6 {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    offset-distance: 5%;
+    opacity: 1;
+  }
+  95% {
+    offset-distance: 95%;
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath7 {
+  0%, 47% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  50% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  52% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  78% {
+    offset-distance: 90%;
+    opacity: 1;
+  }
+  80% {
+    offset-distance: 90%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 90%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath8 {
+  0%, 47% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  50% {
+    offset-distance: 0%;
+    opacity: 0;
+    }
+  52% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  78% {
+    offset-distance: 90%;
+    opacity: 1;
+  }
+  80% {
+    offset-distance: 90%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 90%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath1Left {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  2% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  28% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  30% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath2Left {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  2% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  28% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  30% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath3Left {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  2% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  28% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  30% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath4Left {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  2% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  28% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  30% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath5Left {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  2% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  28% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  30% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveAlongPath6Left {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  2% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  28% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  30% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
