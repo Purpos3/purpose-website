@@ -4,6 +4,9 @@ name: publish-to-github-pages
 on:
   push:
     branches:
+      - '**'
+  pull_request:
+    branches:
       - main
 
 permissions:
@@ -54,6 +57,7 @@ jobs:
           path: out/
 
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

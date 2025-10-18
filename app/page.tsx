@@ -191,9 +191,7 @@ export default function Home() {
             className="hidden lg:block absolute w-[1018px] h-[56px] flex-shrink-0 text-center font-dm-sans text-[48px] font-bold leading-[120%] text-[#454545]"
             style={{
               top: '180px',
-              left: 'calc(50% - 509px)',
-              leadingTrim: 'both',
-              textEdge: 'cap'
+              left: 'calc(50% - 509px)'
             }}
           >
             Powered by intelligent{' '}
