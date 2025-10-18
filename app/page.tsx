@@ -11,7 +11,7 @@ export default function Home() {
   const [filteredCandidatesOpen, setFilteredCandidatesOpen] = useState(false)
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section - First Screen */}
       <div className="relative w-full min-h-screen lg:h-[1054px] flex items-center justify-center px-4 sm:px-8 py-20 sm:py-24 lg:py-0">
         {/* Hero content container - Responsive */}
@@ -23,7 +23,7 @@ export default function Home() {
             <div
               className="hidden lg:block absolute w-[668.371px] h-[668.371px] rounded-full bg-circle-gradient -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow"
               style={{
-                left: '1023px',
+                left: '1400px',
                 bottom: '654px',
                 transform: 'rotate(134.213deg)'
               }}
@@ -32,7 +32,7 @@ export default function Home() {
             <div
               className="hidden lg:block absolute w-[668.371px] h-[668.371px] rounded-full bg-circle-gradient -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow-1"
               style={{
-                left: '1184px',
+                left: '1550px',
                 bottom: '320.87px',
                 transform: 'rotate(134.213deg)'
               }}
@@ -43,8 +43,8 @@ export default function Home() {
             <div
               className="hidden lg:block absolute w-[862.444px] h-[862.444px] rounded-full bg-circle-gradient-reverse -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow-2"
               style={{
-                top: '251px',
-                right: '1067px',
+                top: '200px',
+                right: '1550px',
                 transform: 'rotate(134.213deg)'
               }}
             />
@@ -52,8 +52,8 @@ export default function Home() {
             <div
               className="hidden lg:block absolute w-[619.355px] h-[619.355px] rounded-full bg-circle-gradient-reverse -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow-3"
               style={{
-                top: '533px',
-                right: '810px',
+                top: '500px',
+                right: '1350px',
                 transform: 'rotate(134.213deg)'
               }}
             />
@@ -61,8 +61,8 @@ export default function Home() {
             <div
               className="hidden lg:block absolute w-[668.371px] h-[668.371px] rounded-full bg-circle-gradient-reverse -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow-4"
               style={{
-                top: '683px',
-                right: '495px',
+                top: '700px',
+                right: '1150px',
                 transform: 'rotate(134.213deg)'
               }}
             />
@@ -121,9 +121,9 @@ export default function Home() {
             <h1 className="absolute left-4 right-4 sm:left-8 sm:right-8 lg:left-[209px] lg:right-auto lg:w-[1134px] top-32 sm:top-40 lg:top-[482px] text-center font-dm-sans text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-bold leading-[120%] text-[#454545] z-10 opacity-0 animate-fade-in-delay-3 px-4 lg:px-0">
               Discover{' '}
               <span className="bg-radial-1 bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
-                next-generation
+                next-generation recruiting
               </span>{' '}
-              recruiting technology.
+              technology.
             </h1>
 
             {/* Description text - Responsive positioning */}
@@ -150,8 +150,8 @@ export default function Home() {
           <div
             className="hidden lg:block absolute w-[620px] h-[620px] rounded-full bg-circle-gradient -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow"
             style={{
-              left: '1100px',
-              top: '150px',
+              left: '1500px',
+              top: '0px',
               transform: 'rotate(134.213deg)'
             }}
           />
@@ -159,8 +159,8 @@ export default function Home() {
           <div
             className="hidden lg:block absolute w-[550px] h-[550px] rounded-full bg-circle-gradient -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow-1"
             style={{
-              left: '1250px',
-              bottom: '200px',
+              left: '1600px',
+              top: '300px',
               transform: 'rotate(134.213deg)'
             }}
           />
@@ -170,18 +170,19 @@ export default function Home() {
           <div
             className="hidden lg:block absolute w-[700px] h-[700px] rounded-full bg-circle-gradient-reverse -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow-2"
             style={{
-              top: '200px',
-              right: '1150px',
+              top: '450px',
+              right: '1500px',
               transform: 'rotate(134.213deg)'
             }}
           />
           {/* Lower left circle */}
           <div
-            className="hidden lg:block absolute w-[580px] h-[580px] rounded-full bg-circle-gradient-reverse -z-10 flex-shrink-0 opacity-0 animate-fade-in-slow-3"
+            className="hidden lg:block absolute w-[580px] h-[580px] rounded-full bg-circle-gradient-reverse flex-shrink-0 opacity-0 animate-fade-in-slow-3"
             style={{
-              bottom: '100px',
-              right: '900px',
-              transform: 'rotate(134.213deg)'
+              top: '700px',
+              right: '1300px',
+              transform: 'rotate(134.213deg)',
+              zIndex: -5
             }}
           />
 
@@ -189,8 +190,10 @@ export default function Home() {
           <h2
             className="hidden lg:block absolute w-[1018px] h-[56px] flex-shrink-0 text-center font-dm-sans text-[48px] font-bold leading-[120%] text-[#454545]"
             style={{
-              top: '221.5px',
-              left: '267px'
+              top: '180px',
+              left: 'calc(50% - 509px)',
+              leadingTrim: 'both',
+              textEdge: 'cap'
             }}
           >
             Powered by intelligent{' '}
@@ -201,10 +204,10 @@ export default function Home() {
 
           {/* First rectangle */}
           <div
-            className="hidden lg:block absolute w-[358px] h-[425px] flex-shrink-0 transition-all duration-300 opacity-50 hover:opacity-100 hover:-translate-y-3"
+            className="hidden lg:block absolute w-[450px] h-[530px] flex-shrink-0 transition-all duration-300 opacity-50 hover:opacity-100 hover:-translate-y-3"
             style={{
               top: '340px',
-              left: '189px',
+              left: '56px',
               borderRadius: '50px',
               border: '2px solid var(--glass-stroke, #FFF)',
               background: 'linear-gradient(180deg, #3783AC 0%, #1D0A6F 100%)',
@@ -273,10 +276,10 @@ export default function Home() {
 
           {/* Second rectangle */}
           <div
-            className="hidden lg:block absolute w-[358px] h-[425px] flex-shrink-0 transition-all duration-300 opacity-50 hover:opacity-100 hover:-translate-y-3"
+            className="hidden lg:block absolute w-[450px] h-[530px] flex-shrink-0 transition-all duration-300 opacity-50 hover:opacity-100 hover:-translate-y-3"
             style={{
               top: '340px',
-              left: '597px',
+              left: '551px',
               borderRadius: '50px',
               border: '2px solid var(--glass-stroke, #FFF)',
               background: 'linear-gradient(180deg, #3783AC 0%, #1D0A6F 100%)',
@@ -343,10 +346,10 @@ export default function Home() {
 
           {/* Third rectangle */}
           <div
-            className="hidden lg:block absolute w-[358px] h-[425px] flex-shrink-0 transition-all duration-300 opacity-50 hover:opacity-100 hover:-translate-y-3"
+            className="hidden lg:block absolute w-[450px] h-[530px] flex-shrink-0 transition-all duration-300 opacity-50 hover:opacity-100 hover:-translate-y-3"
             style={{
               top: '340px',
-              left: '1005px',
+              left: '1046px',
               borderRadius: '50px',
               border: '2px solid var(--glass-stroke, #FFF)',
               background: 'linear-gradient(180deg, #3783AC 0%, #1D0A6F 100%)',
@@ -418,17 +421,18 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Separator line at bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#5323E5]/30 to-transparent" style={{ zIndex: 10 }} />
         </div>
       </div>
 
-      {/* Separator line */}
-      <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-[#5323E5]/30 to-transparent" style={{ zIndex: 10 }} />
-
       {/* Individuals Section */}
-      <section id="individuals" className="min-h-screen bg-white flex items-center justify-center px-4 sm:px-8 py-20">
-        <div className="max-w-[1552px] w-full">
+      <section id="individuals" className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 py-20">
+        {/* Transition gradient at boundary */}
+        <div className="absolute w-full h-[200px] bg-gradient-to-b from-transparent to-white" style={{ top: '-100px', left: 0, right: 0, zIndex: -8 }} />
+
+        {/* White background layer */}
+        <div className="absolute inset-0 bg-white" style={{ zIndex: -10 }} />
+
+        <div className="relative max-w-[1552px] w-full">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-dm-sans font-bold text-center text-[#454545] mb-8">
             For <span className="bg-radial-1 bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">Individuals</span>
           </h2>
@@ -439,19 +443,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Separator line */}
-      <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-[#5323E5]/30 to-transparent" style={{ zIndex: 10 }} />
-
       {/* Companies Section */}
-      <section id="companies" className="relative w-full min-h-screen lg:h-[1054px] flex items-center justify-center bg-gradient-to-b from-white to-[#F5F5F7] px-4 sm:px-8 py-20 sm:py-24 lg:py-0">
+      <section id="companies" className="relative w-full min-h-screen lg:h-[1054px] flex items-center justify-center px-4 sm:px-8 py-20 sm:py-24 lg:py-0">
+        {/* Background gradient layer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-[#F5F5F7]" style={{ zIndex: -10 }} />
+
         {/* Companies content container - Same dimensions as hero */}
         <div className="relative w-full max-w-[1552px] min-h-[600px] sm:min-h-[700px] lg:h-[1054px]">
+          {/* Screen boundary markers - horizontal */}
+          <div className="hidden lg:block absolute left-0 right-0 top-0 h-[2px] bg-red-500" style={{ zIndex: 100 }} />
+          <div className="hidden lg:block absolute left-0 right-0 bottom-0 h-[2px] bg-red-500" style={{ zIndex: 100 }} />
+
           {/* Central gradient box */}
           <div
-            className="hidden lg:block absolute w-[1360px] h-[927px] flex-shrink-0"
+            className="hidden lg:block absolute w-[1760px] h-[927px] flex-shrink-0"
             style={{
               top: '63.5px',
-              left: '96px',
+              left: '-104px',
               borderRadius: '134px',
               background: 'linear-gradient(180deg, #EEE9FC 0%, #D3E3FF 50%, #DDFCF6 100%)'
             }}
