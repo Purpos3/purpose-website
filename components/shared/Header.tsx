@@ -24,17 +24,23 @@ export default function Header() {
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 pointer-events-none">
         {/* Glassmorphism card with liquid glass effect */}
         <div
-          className={`relative w-full max-w-[1552px] h-24 transition-all duration-500 ease-out pointer-events-auto ${
-            isScrolled ? 'backdrop-blur-xl backdrop-saturate-150 rounded-[20px]' : ''
-          }`}
-          style={isScrolled ? {
-            background: 'rgba(238, 233, 252, 0.5)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.3)',
-          } : undefined}
+          className={`relative w-full max-w-[1552px] h-24 transition-all duration-500 ease-out pointer-events-auto`}
         >
+          {/* Extended background for scrolled state */}
+          {isScrolled && (
+            <div
+              className="absolute inset-0 backdrop-blur-xl backdrop-saturate-150 rounded-[20px]"
+              style={{
+                left: '-110px',
+                right: '-110px',
+                background: 'rgba(238, 233, 252, 0.25)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.4)',
+              }}
+            />
+          )}
           {/* Logo - Responsive positioning */}
-          <div className="absolute opacity-0 animate-fade-in left-4 top-4 sm:left-8 sm:top-8 lg:left-[109px] lg:top-[20px]">
+          <div className="absolute opacity-0 animate-fade-in left-4 top-4 sm:left-8 sm:top-8 lg:left-[-80px] lg:top-[20px]">
             <Link href="/">
               <span className="sr-only">Purpose</span>
               <div className="scale-75 sm:scale-90 lg:scale-100 origin-left">
@@ -48,7 +54,7 @@ export default function Header() {
             href="#individuals"
             className="hidden lg:block absolute text-xl xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-1 cursor-pointer"
             style={{
-              left: '326px',
+              left: '187px',
               top: '30px'
             }}
           >
@@ -58,7 +64,7 @@ export default function Header() {
             href="#companies"
             className="hidden lg:block absolute text-xl xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-2 cursor-pointer"
             style={{
-              left: '509.94px',
+              left: '370.94px',
               top: '30px'
             }}
           >
@@ -68,7 +74,7 @@ export default function Header() {
             href="#about"
             className="hidden lg:block absolute text-xl xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-2 cursor-pointer"
             style={{
-              left: '698.8px',
+              left: '559.8px',
               top: '30px'
             }}
           >
@@ -80,7 +86,7 @@ export default function Header() {
             className="hidden lg:block absolute opacity-0 animate-fade-in-delay-3"
             style={{
               top: '20px',
-              right: '97px'
+              right: '-80px'
             }}
           >
             <CTAButton href="/cta">Transform your hiring</CTAButton>
