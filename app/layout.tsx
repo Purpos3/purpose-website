@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Poppins, DM_Sans } from 'next/font/google'
 import './globals.css'
-import Footer from '@/components/shared/Footer'
 
 const poppins = Poppins({
   weight: ['600', '700'],
@@ -31,7 +30,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} ${dmSans.variable} ${poppins.className} flex flex-col min-h-screen`}>
         <main className="flex-1">{children}</main>
-        <Footer />
       </body>
     </html>
   )

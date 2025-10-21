@@ -4,7 +4,7 @@ import Link from 'next/link'
 import PurposeLogo from '@/components/icons/PurposeLogo'
 import CTAButton from '@/components/ui/CTAButton'
 
-export default function ImprintPage() {
+export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header - Non-sticky */}
@@ -65,8 +65,8 @@ export default function ImprintPage() {
         </div>
       </div>
 
-      {/* Imprint Content Section */}
-      <section className="relative w-full flex items-center justify-center px-4 sm:px-8 py-20 bg-white">
+      {/* Privacy Policy Content Section */}
+      <section className="relative w-full flex items-center justify-center px-4 sm:px-8 py-10 bg-white">
         <div className="relative w-full max-w-[1552px] flex justify-center">
           {/* Content Box */}
           <div
@@ -94,51 +94,47 @@ export default function ImprintPage() {
                 lineHeight: '120%'
               }}
             >
-              Imprint
+              Privacy Policy / Datenschutzerklärung
             </h1>
 
-            {/* Content Box with Legal Title */}
+            {/* Content Box */}
             <div
               style={{
-                width: '1520px',
+                width: '1256px',
                 flexShrink: 0,
                 marginTop: '198px',
-                paddingLeft: '120px',
-                paddingRight: '120px',
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
                 lineHeight: 'normal'
               }}
             >
-              {/* Legal Title */}
-              <div
-                style={{
-                  width: '183px',
-                  height: '38px',
-                  flexShrink: 0,
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '32px',
-                  fontWeight: 700,
-                  lineHeight: '120%',
-                  marginBottom: '64px'
-                }}
-              >
-                Legal
-              </div>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                marginBottom: '32px'
+              }}>
+                Der Schutz Ihrer persönlichen Daten ist uns wichtig. Nachfolgend informieren wir Sie über die Erhebung, Verarbeitung und Nutzung Ihrer personenbezogenen Daten im Rahmen Ihrer Nutzung unserer Website.
+              </p>
+
+              <p style={{
+                color: '#454545',
+                fontFamily: 'Helvetica',
+                fontSize: '32px',
+                fontStyle: 'normal',
                 fontWeight: 700,
                 lineHeight: 'normal',
                 marginBottom: '16px'
-              }}>Angaben gemäß § 5 TMG</p>
+              }}>I. Verantwortliche Stelle</p>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '32px'
@@ -146,270 +142,246 @@ export default function ImprintPage() {
                 Purpose UG (haftungsbeschränkt)<br />
                 Seidl-Kreuz-Weg 94<br />
                 85737 Ismaning<br />
-                Germany
+                E-Mail: l.faber@purpose.hr
               </p>
 
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
-                fontWeight: 700,
+                fontStyle: 'normal',
+                fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '16px'
-              }}>Vertreten durch</p>
+              }}>Erhebung und Speicherung personenbezogener Daten</p>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '32px'
               }}>
-                Geschäftsführer: Lukas Faber
+                Bei Besuch unserer Website werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen an den Server unserer Website gesendet. Diese Informationen werden temporär in einem sog. Logfile gespeichert.
               </p>
 
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
-                fontWeight: 700,
+                fontStyle: 'normal',
+                fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '16px'
-              }}>Kontakt</p>
+              }}>Rechtsgrundlage der Datenverarbeitung</p>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '32px'
               }}>
-                E-Mail: l.faber@purpose.hr<br />
+                Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website.
+              </p>
+
+              <p style={{
+                color: '#454545',
+                fontFamily: 'Helvetica',
+                fontSize: '32px',
+                fontStyle: 'normal',
+                fontWeight: 700,
+                lineHeight: 'normal',
+                marginBottom: '16px',
+                marginTop: '48px'
+              }}>II. Datenverarbeitung auf dieser Website</p>
+
+              <p style={{
+                color: '#454545',
+                fontFamily: 'Helvetica',
+                fontSize: '20px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                marginBottom: '16px'
+              }}>2.1 Technische Daten</p>
+              <p style={{
+                color: '#454545',
+                fontFamily: 'Helvetica',
+                fontSize: '20px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                marginBottom: '16px'
+              }}>
+                Automatisch erfasst: IP-Adresse, Browser-Typ, Betriebssystem, besuchte Seiten, Zugriffszeitpunkt<br />
+                Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO<br />
+                Zweck: Website-Betrieb und Sicherheit<br />
+                Speicherdauer: 7 Tage
               </p>
 
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
-                fontWeight: 700,
+                fontStyle: 'normal',
+                fontWeight: 400,
                 lineHeight: 'normal',
-                marginBottom: '16px'
-              }}>Registereintrag</p>
+                marginBottom: '16px',
+                marginTop: '32px'
+              }}>2.2 Kontaktdaten</p>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '32px'
               }}>
-                Eintragung im Handelsregister<br />
-                Registergericht: Amtsgericht München<br />
-                Registernummer: HRB 292052
+                Bei Demo-Anfragen: Name, E-Mail, Unternehmen, Nachricht<br />
+                Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO<br />
+                Speicherdauer: 30 Tage nach Anfrage
+              </p>
+
+              <p style={{
+                color: '#454545',
+                fontFamily: 'Helvetica',
+                fontSize: '32px',
+                fontStyle: 'normal',
+                fontWeight: 700,
+                lineHeight: 'normal',
+                marginBottom: '16px',
+                marginTop: '48px'
+              }}>III. Externe Tools</p>
+
+              <p style={{
+                color: '#454545',
+                fontFamily: 'Helvetica',
+                fontSize: '20px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                marginBottom: '16px'
+              }}>3.1 Google Analytics</p>
+              <p style={{
+                color: '#454545',
+                fontFamily: 'Helvetica',
+                fontSize: '20px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                marginBottom: '16px'
+              }}>
+                Zweck: Website-Analyse<br />
+                Daten: Anonymisierte IP, Nutzungsverhalten, Browser-Informationen<br />
+                Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)<br />
+                Datenübertragung: USA (EU-Standardvertragsklauseln)<br />
+                Widerspruch: Cookie-Banner
               </p>
 
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
-                fontWeight: 700,
+                fontStyle: 'normal',
+                fontWeight: 400,
                 lineHeight: 'normal',
-                marginBottom: '16px'
-              }}>Umsatzsteuer-ID</p>
+                marginBottom: '16px',
+                marginTop: '32px'
+              }}>3.2 Calendly</p>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '32px'
               }}>
-                Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br />
-                DE368116002
+                Zweck: Demo-Terminbuchung<br />
+                Daten: Name, E-Mail, Terminpräferenzen<br />
+                Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO<br />
+                Datenübertragung: USA
               </p>
 
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
-                fontSize: '20px',
+                fontSize: '32px',
+                fontStyle: 'normal',
                 fontWeight: 700,
                 lineHeight: 'normal',
-                marginBottom: '16px'
-              }}>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</p>
+                marginBottom: '16px',
+                marginTop: '48px'
+              }}>IV. Cookies</p>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '32px'
               }}>
-                Lukas Faber<br />
-                Seidl-Kreuz-Weg 94<br />
-                85737 Ismaning
+                Wir verwenden technisch notwendige und Analyse-Cookies. Ihre Einwilligung können Sie über den Cookie-Banner verwalten.
               </p>
 
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
-                fontSize: '20px',
+                fontSize: '32px',
+                fontStyle: 'normal',
                 fontWeight: 700,
                 lineHeight: 'normal',
-                marginBottom: '16px'
-              }}>EU-Streitschlichtung</p>
+                marginBottom: '16px',
+                marginTop: '48px'
+              }}>V. Ihre Rechte (Art. 15-21 DSGVO)</p>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
-                marginBottom: '32px'
+                marginBottom: '16px'
               }}>
-                Die europäische Online-Streitbeilegungsplattform (ODR) wurde zum 20. Juli 2025 eingestellt.<br />
-                Informationen zu Verbraucherstreitbeilegungsstellen in den EU-Mitgliedstaaten finden Sie unter:<br />
-                https://consumer-redress.ec.europa.eu/dispute-resolution-bodies<br />
-                Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                • Auskunft über gespeicherte Daten<br />
+                • Berichtigung unrichtiger Daten<br />
+                • Löschung unter bestimmten Voraussetzungen<br />
+                • Einschränkung der Verarbeitung<br />
+                • Datenübertragbarkeit<br />
+                • Widerspruch gegen Verarbeitung<br />
+                • Widerruf erteilter Einwilligungen
               </p>
 
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
-                fontSize: '20px',
+                fontSize: '32px',
+                fontStyle: 'normal',
                 fontWeight: 700,
                 lineHeight: 'normal',
-                marginBottom: '16px'
-              }}>Verbraucherstreitbeilegung/Universalschlichtungsstelle</p>
+                marginBottom: '16px',
+                marginTop: '48px'
+              }}>VI. Beschwerderecht</p>
               <p style={{
                 color: '#454545',
                 fontFamily: 'Helvetica',
                 fontSize: '20px',
+                fontStyle: 'normal',
                 fontWeight: 400,
                 lineHeight: 'normal',
                 marginBottom: '32px'
               }}>
-                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                Bei Beschwerden wenden Sie sich an die zuständige Datenschutzaufsichtsbehörde Ihres Bundeslandes.
               </p>
 
               <p style={{ fontWeight: 400, marginTop: '48px' }}>
                 Stand: 20.10.2025 | Version: 1.0
               </p>
-
-              {/* Disclaimer Section */}
-              <div style={{ marginTop: '64px', width: '920px' }}>
-                <h2 style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '32px',
-                  fontWeight: 700,
-                  lineHeight: 'normal',
-                  marginBottom: '32px'
-                }}>
-                  Haftungsausschluss – Disclaimer
-                </h2>
-
-                <h3 style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 700,
-                  lineHeight: 'normal',
-                  marginBottom: '16px'
-                }}>
-                  Haftung für Inhalte
-                </h3>
-                <p style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                  marginBottom: '16px'
-                }}>
-                  Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
-                </p>
-                <p style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                  marginBottom: '32px'
-                }}>
-                  Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntniserlangung einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von den o.g. Rechtsverletzungen werden wir diese Inhalte unverzüglich entfernen.
-                </p>
-
-                <h3 style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 700,
-                  lineHeight: 'normal',
-                  marginBottom: '16px'
-                }}>
-                  Haftungsbeschränkung für externe Links
-                </h3>
-                <p style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                  marginBottom: '16px'
-                }}>
-                  Unsere Webseite enthält Links auf externe Webseiten Dritter. Auf die Inhalte dieser direkt oder indirekt verlinkten Webseiten haben wir keinen Einfluss. Daher können wir für die &bdquo;externen Links&ldquo; auch keine Gewähr auf Richtigkeit der Inhalte übernehmen. Für die Inhalte der externen Links sind die jeweilige Anbieter oder Betreiber (Urheber) der Seiten verantwortlich.
-                </p>
-                <p style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                  marginBottom: '16px'
-                }}>
-                  Die externen Links wurden zum Zeitpunkt der Linksetzung auf eventuelle Rechtsverstöße überprüft und waren im Zeitpunkt der Linksetzung frei von rechtswidrigen Inhalten. Eine ständige inhaltliche Überprüfung der externen Links ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht möglich. Bei direkten oder indirekten Verlinkungen auf die Webseiten Dritter, die außerhalb unseres Verantwortungsbereichs liegen, würde eine Haftungsverpflichtung ausschließlich in dem Fall nur bestehen, wenn wir von den Inhalten Kenntnis erlangen und es uns technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.
-                </p>
-                <p style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                  marginBottom: '16px'
-                }}>
-                  Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes &bdquo;purpose.hr&ldquo; gesetzten Links und Verweise von Fragestellern. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
-                </p>
-                <p style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                  marginBottom: '32px'
-                }}>
-                  Werden uns Rechtsverletzungen bekannt, werden die externen Links durch uns unverzüglich entfernt.
-                </p>
-
-                <h3 style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 700,
-                  lineHeight: 'normal',
-                  marginBottom: '16px'
-                }}>
-                  Urheberrecht
-                </h3>
-                <p style={{
-                  color: '#454545',
-                  fontFamily: 'Helvetica',
-                  fontSize: '20px',
-                  fontWeight: 400,
-                  lineHeight: 'normal',
-                  marginBottom: '16px'
-                }}>
-                  Die auf unserer Webseite veröffentlichen Inhalte und Werke unterliegen dem deutschen Urheberrecht (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf). Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung des geistigen Eigentums in ideeller und materieller Sicht des Urhebers außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Urhebers i.S.d. Urhebergesetzes (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf). Downloads und Kopien dieser Seite sind nur für den privaten und nicht kommerziellen Gebrauch erlaubt. Sind die Inhalte auf unserer Webseite nicht von uns erstellt worden, sind die Urheberrechte Dritter zu beachten. Die Inhalte Dritter werden als solche kenntlich gemacht. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte unverzüglich entfernen.
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -420,7 +392,7 @@ export default function ImprintPage() {
         <div className="relative w-full max-w-[1552px] flex justify-center">
           {/* Imprint Box */}
           <div
-            className="flex-shrink-0 flex items-start justify-between px-12 py-8"
+            className="flex-shrink-0 flex items-center justify-between px-12 py-8"
             style={{
               width: '1760px',
               height: '220px',
@@ -514,9 +486,10 @@ export default function ImprintPage() {
 
             {/* Middle - Registered Office */}
             <div
-              className="flex-shrink-0 flex flex-col"
+              className="flex-shrink-0"
               style={{
                 width: '239.644px',
+                height: '70.259px',
                 color: '#454545',
                 textAlign: 'center',
                 fontFamily: 'Helvetica',
@@ -525,8 +498,8 @@ export default function ImprintPage() {
                 lineHeight: '120%'
               }}
             >
-              <div style={{ fontWeight: 700, marginBottom: '8px' }}>Registered Office</div>
-              <div style={{ fontWeight: 400 }}>
+              <div style={{ fontWeight: 700 }}>Registered Office</div>
+              <div style={{ fontWeight: 400, marginTop: '8px' }}>
                 Ismaning - HRB Munich 292052<br />
                 Tax number: 143/173/60143<br />
                 VAT ID No.: DE368116002
@@ -535,19 +508,20 @@ export default function ImprintPage() {
 
             {/* Right - Legal */}
             <div className="flex-shrink-0 flex flex-col" style={{ width: '240px' }}>
-              <div
+              <h2
+                className="text-center font-bold mb-4"
                 style={{
+                  width: '89.191px',
+                  height: '14.052px',
+                  flexShrink: 0,
                   color: '#454545',
                   fontFamily: 'Helvetica',
                   fontSize: '16px',
-                  fontWeight: 700,
-                  lineHeight: '120%',
-                  marginBottom: '8px',
-                  textAlign: 'center'
+                  lineHeight: '120%'
                 }}
               >
                 Legal
-              </div>
+              </h2>
               <nav className="flex flex-col gap-2">
                 <a
                   href="/terms-and-conditions"
