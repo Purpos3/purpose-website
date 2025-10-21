@@ -1387,8 +1387,58 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right spacer - for centering */}
-            <div className="flex-shrink-0" style={{ width: '240px' }} />
+            {/* Right - Legal */}
+            <div className="flex-shrink-0 flex flex-col" style={{ width: '240px' }}>
+              <h2
+                className="text-center font-bold mb-4"
+                style={{
+                  width: '89.191px',
+                  height: '14.052px',
+                  flexShrink: 0,
+                  color: '#454545',
+                  fontFamily: 'Helvetica',
+                  fontSize: '16px',
+                  lineHeight: '120%'
+                }}
+              >
+                Legal
+              </h2>
+              <nav className="flex flex-col gap-2">
+                <a
+                  href="/terms-and-conditions"
+                  className="text-[#454545] hover:text-[#000000] transition-colors"
+                  style={{
+                    fontFamily: 'Helvetica',
+                    fontSize: '14px',
+                    lineHeight: '120%'
+                  }}
+                >
+                  Terms & Conditions
+                </a>
+                <a
+                  href="/imprint"
+                  className="text-[#454545] hover:text-[#000000] transition-colors"
+                  style={{
+                    fontFamily: 'Helvetica',
+                    fontSize: '14px',
+                    lineHeight: '120%'
+                  }}
+                >
+                  Imprint
+                </a>
+                <a
+                  href="/privacy-policy"
+                  className="text-[#454545] hover:text-[#000000] transition-colors"
+                  style={{
+                    fontFamily: 'Helvetica',
+                    fontSize: '14px',
+                    lineHeight: '120%'
+                  }}
+                >
+                  Privacy Policy
+                </a>
+              </nav>
+            </div>
           </div>
         </div>
       </section>
