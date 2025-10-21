@@ -356,7 +356,7 @@ export default function ImprintPage() {
                   lineHeight: 'normal',
                   marginBottom: '16px'
                 }}>
-                  Unsere Webseite enthält Links auf externe Webseiten Dritter. Auf die Inhalte dieser direkt oder indirekt verlinkten Webseiten haben wir keinen Einfluss. Daher können wir für die „externen Links" auch keine Gewähr auf Richtigkeit der Inhalte übernehmen. Für die Inhalte der externen Links sind die jeweilige Anbieter oder Betreiber (Urheber) der Seiten verantwortlich.
+                  Unsere Webseite enthält Links auf externe Webseiten Dritter. Auf die Inhalte dieser direkt oder indirekt verlinkten Webseiten haben wir keinen Einfluss. Daher können wir für die &bdquo;externen Links&ldquo; auch keine Gewähr auf Richtigkeit der Inhalte übernehmen. Für die Inhalte der externen Links sind die jeweilige Anbieter oder Betreiber (Urheber) der Seiten verantwortlich.
                 </p>
                 <p style={{
                   color: '#454545',
@@ -376,7 +376,7 @@ export default function ImprintPage() {
                   lineHeight: 'normal',
                   marginBottom: '16px'
                 }}>
-                  Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes „purpose.hr" gesetzten Links und Verweise von Fragestellern. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
+                  Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes &bdquo;purpose.hr&ldquo; gesetzten Links und Verweise von Fragestellern. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
                 </p>
                 <p style={{
                   color: '#454545',
