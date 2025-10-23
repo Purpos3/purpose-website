@@ -21,121 +21,105 @@ export default function Header() {
   return (
     <>
       {/* Sticky header wrapper */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 pointer-events-none">
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 lg:px-8 pt-4 pointer-events-none">
         {/* Glassmorphism card with liquid glass effect */}
-        <div
-          className={`relative w-full max-w-[1552px] h-24 transition-all duration-500 ease-out pointer-events-auto`}
-        >
+        <div className="relative w-full max-w-[1552px] h-20 sm:h-24 transition-all duration-500 ease-out pointer-events-auto">
           {/* Extended background for scrolled state */}
           {isScrolled && (
             <div
-              className="absolute inset-0 backdrop-blur-xl backdrop-saturate-150 rounded-[20px]"
+              className="absolute -inset-x-4 sm:-inset-x-8 lg:-inset-x-12 xl:-inset-x-20 inset-y-0 backdrop-blur-xl backdrop-saturate-150 rounded-[20px]"
               style={{
-                left: '-110px',
-                right: '-110px',
                 background: 'rgba(238, 233, 252, 0.25)',
                 border: '1px solid rgba(255, 255, 255, 0.3)',
                 boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.4)',
               }}
             />
           )}
-          {/* Logo - Responsive positioning */}
-          <div className="absolute opacity-0 animate-fade-in left-4 top-4 sm:left-8 sm:top-8 lg:left-[-80px] lg:top-[20px]">
-            <Link href="/">
-              <span className="sr-only">Purpose</span>
-              <div className="scale-75 sm:scale-90 lg:scale-100 origin-left">
-                <PurposeLogo />
-              </div>
-            </Link>
-          </div>
 
-          {/* Desktop navigation - Absolute positioning */}
-          <a
-            href="#individuals"
-            className="hidden lg:block absolute text-xl xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-1 cursor-pointer"
-            style={{
-              left: '187px',
-              top: '30px'
-            }}
-          >
-            Individuals
-          </a>
-          <a
-            href="#companies"
-            className="hidden lg:block absolute text-xl xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-2 cursor-pointer"
-            style={{
-              left: '370.94px',
-              top: '30px'
-            }}
-          >
-            Companies
-          </a>
-          <a
-            href="#about"
-            className="hidden lg:block absolute text-xl xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-2 cursor-pointer"
-            style={{
-              left: '559.8px',
-              top: '30px'
-            }}
-          >
-            About us
-          </a>
+          {/* Header content using flexbox for responsive layout */}
+          <div className="relative flex items-center justify-between h-full px-4 sm:px-6 lg:px-8 xl:px-12">
+            {/* Logo - Responsive positioning */}
+            <div className="opacity-0 animate-fade-in">
+              <Link href="/">
+                <span className="sr-only">Purpose</span>
+                <div className="scale-75 sm:scale-90 lg:scale-100 origin-left">
+                  <PurposeLogo />
+                </div>
+              </Link>
+            </div>
 
-          {/* CTA Button - Absolute positioning */}
-          <div
-            className="hidden lg:block absolute opacity-0 animate-fade-in-delay-3"
-            style={{
-              top: '20px',
-              right: '-80px'
-            }}
-          >
-            <CTAButton href="/cta">Transform your hiring</CTAButton>
-          </div>
+            {/* Desktop navigation - Flexbox for responsive spacing */}
+            <nav className="hidden lg:flex items-center gap-8 xl:gap-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <a
+                href="#individuals"
+                className="text-lg xl:text-xl 2xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-1 cursor-pointer whitespace-nowrap"
+              >
+                Individuals
+              </a>
+              <a
+                href="#companies"
+                className="text-lg xl:text-xl 2xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-2 cursor-pointer whitespace-nowrap"
+              >
+                Companies
+              </a>
+              <a
+                href="#about"
+                className="text-lg xl:text-xl 2xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-2 cursor-pointer whitespace-nowrap"
+              >
+                About us
+              </a>
+            </nav>
 
-          {/* Mobile menu button */}
-          <div className="flex lg:hidden absolute top-4 right-4 opacity-0 animate-fade-in">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[var(--primary-text)]"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-expanded={mobileMenuOpen}
-              aria-label="Toggle navigation menu"
-            >
-              <span className="sr-only">
-                {mobileMenuOpen ? 'Close menu' : 'Open menu'}
-              </span>
-              {mobileMenuOpen ? (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-              )}
-            </button>
+            {/* CTA Button - Responsive positioning */}
+            <div className="hidden lg:block opacity-0 animate-fade-in-delay-3">
+              <CTAButton href="/cta">Transform your hiring</CTAButton>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="flex lg:hidden opacity-0 animate-fade-in">
+              <button
+                type="button"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[var(--primary-text)]"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-expanded={mobileMenuOpen}
+                aria-label="Toggle navigation menu"
+              >
+                <span className="sr-only">
+                  {mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                </span>
+                {mobileMenuOpen ? (
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>
