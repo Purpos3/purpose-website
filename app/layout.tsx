@@ -3,7 +3,7 @@ import { Poppins, DM_Sans } from 'next/font/google'
 import './globals.css'
 
 const poppins = Poppins({
-  weight: ['600', '700'],
+  weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
