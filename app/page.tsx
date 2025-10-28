@@ -9,6 +9,12 @@ export default function Home() {
   const [unfilteredApplicantsOpen, setUnfilteredApplicantsOpen] = useState(false)
   const [dualLayerMatchingOpen, setDualLayerMatchingOpen] = useState(false)
   const [filteredCandidatesOpen, setFilteredCandidatesOpen] = useState(false)
+  const [openIndividualBox, setOpenIndividualBox] = useState<null | 1 | 2 | 3>(null)
+
+  // Derived state for compatibility
+  const uploadCVOpen = openIndividualBox === 1
+  const tweakPreferencesOpen = openIndividualBox === 2
+  const applyManageOpen = openIndividualBox === 3
 
   return (
     <div className="min-h-screen overflow-x-hidden">
@@ -423,21 +429,387 @@ export default function Home() {
       </div>
 
       {/* Individuals Section */}
-      <section id="individuals" className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 py-20">
+      <section id="individuals" className="relative w-full min-h-screen lg:h-[1370px] flex items-center justify-center px-4 sm:px-8 py-20 sm:py-24 lg:py-0">
         {/* Transition gradient at boundary */}
         <div className="absolute w-full h-[200px] bg-gradient-to-b from-transparent to-white" style={{ top: '-100px', left: 0, right: 0, zIndex: -8 }} />
 
         {/* White background layer */}
         <div className="absolute inset-0 bg-white" style={{ zIndex: -10 }} />
 
-        <div className="relative max-w-[1552px] w-full">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-dm-sans font-bold text-center text-[#454545] mb-8">
-            For <span className="bg-radial-1 bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">Individuals</span>
-          </h2>
-          <p className="text-lg sm:text-xl text-center text-[#454545CC] font-poppins">
-            Your dream job finds you. Stop searching, start discovering.
+        {/* Individuals content container - Same dimensions as Companies */}
+        <div className="relative w-full max-w-[1552px] min-h-[600px] sm:min-h-[700px] lg:h-[1370px]">
+          {/* Central gradient box - same as Companies */}
+          <div
+            className="hidden lg:block absolute w-[1760px] h-[927px] flex-shrink-0"
+            style={{
+              top: '63.5px',
+              left: '-104px',
+              borderRadius: '134px',
+              background: 'linear-gradient(180deg, #EEE9FC 0%, #D3E3FF 50%, #DDFCF6 100%)'
+            }}
+          />
+
+          {/* "Individuals" text inside gradient box */}
+          <h3
+            className="hidden lg:block absolute w-[200px] h-[29px] flex-shrink-0 font-dm-sans text-[30px] font-bold leading-[120%] text-[#454545]"
+            style={{
+              top: 'calc(63.5px + 60px)',
+              left: 'calc(-104px + 95px)'
+            }}
+          >
+            Individuals
+          </h3>
+
+          {/* Main Title */}
+          <h1
+            className="hidden lg:block absolute font-dm-sans text-[64px] font-bold leading-[120%] flex-shrink-0"
+            style={{
+              width: '750px',
+              height: '127px',
+              top: 'calc(63.5px + 184px)',
+              left: 'calc(1552px - 750px - 72px)'
+            }}
+          >
+            <span
+              style={{
+                background: 'radial-gradient(169.11% 136.3% at 17.79% 0%, #5323E5 0%, #5472FF 38.13%, #6DC9D8 81.27%, #72E0DA 92.1%, #6DECD3 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
+            >
+              Automated job
+            </span>
+            <br />
+            <span style={{ color: '#454545' }}>
+              search, centralized.
+            </span>
+          </h1>
+
+          {/* Description text */}
+          <p
+            className="hidden lg:block absolute font-poppins text-[21px]"
+            style={{
+              width: '620px',
+              color: '#808080',
+              fontWeight: 400,
+              lineHeight: 'normal',
+              top: 'calc(63.5px + 360px)',
+              left: 'calc(1552px - 750px - 72px)'
+            }}
+          >
+            Our CV interpretation and matching technology reduces the time needed to apply significantly and connects you to suitable positions instantly.
           </p>
-          {/* Add more content here */}
+
+          {/* Clickable gradient box 1 */}
+          <div
+            className="hidden lg:block absolute cursor-pointer flex-shrink-0 transition-transform duration-200 hover:scale-[1.02]"
+            style={{
+              width: '620px',
+              height: '61px',
+              top: 'calc(63.5px + 360px + 90px + 37px)',
+              left: 'calc(1552px - 750px - 72px)',
+              borderRadius: '30px',
+              background: 'linear-gradient(137deg, #FFF 7.48%, rgba(255, 255, 255, 0.00) 94.06%)',
+              padding: '2px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.50)'
+            }}
+            onClick={() => setOpenIndividualBox(openIndividualBox === 1 ? null : 1)}
+          >
+            {/* Inner content box */}
+            <div
+              className="font-dm-sans"
+              style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '28px',
+                background: 'linear-gradient(102deg, #373369 10.53%, #6D8CC1 81.23%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#FFF',
+                fontSize: '24px',
+                fontWeight: 700,
+                lineHeight: '120%',
+                position: 'relative'
+              }}
+            >
+              <span style={{ position: 'absolute', left: '30px' }}>1</span>
+              Upload CV
+              {/* Chevron icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                className="absolute right-[30px] transition-all duration-300"
+                style={{
+                  transform: uploadCVOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+                }}
+              >
+                <path fillRule="evenodd" clipRule="evenodd" d="M3.4301 7.5968C3.83689 7.19001 4.49644 7.19001 4.90324 7.5968L12.5 15.1936L20.0968 7.5968C20.5036 7.19001 21.1631 7.19001 21.5699 7.5968C21.9767 8.0036 21.9767 8.66315 21.5699 9.06994L13.2366 17.4033C12.8298 17.8101 12.1702 17.8101 11.7634 17.4033L3.4301 9.06994C3.0233 8.66315 3.0233 8.0036 3.4301 7.5968Z" fill="#FFF"/>
+              </svg>
+            </div>
+          </div>
+
+          {/* Dropdown for Upload CV */}
+          {uploadCVOpen && (
+            <p
+              className="hidden lg:block absolute font-poppins text-[21px] text-center"
+              style={{
+                width: '620px',
+                color: '#808080',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                top: 'calc(63.5px + 360px + 90px + 37px + 61px + 35px)',
+                left: 'calc(1552px - 750px - 72px)',
+                zIndex: 10
+              }}
+            >
+              Purpose analyses & interprets all the necessary information directly from your resume.
+            </p>
+          )}
+
+          {/* Clickable gradient box 2 */}
+          <div
+            className="hidden lg:block absolute cursor-pointer flex-shrink-0 transition-transform duration-200 hover:scale-[1.02]"
+            style={{
+              width: '620px',
+              height: '61px',
+              top: `calc(63.5px + 360px + 90px + 37px + 61px + 35px${uploadCVOpen ? ' + 105px' : ''})`,
+              left: 'calc(1552px - 750px - 72px)',
+              borderRadius: '30px',
+              background: 'linear-gradient(137deg, #FFF 7.48%, rgba(255, 255, 255, 0.00) 94.06%)',
+              padding: '2px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.50)',
+              transition: 'top 300ms'
+            }}
+            onClick={() => setOpenIndividualBox(openIndividualBox === 2 ? null : 2)}
+          >
+            {/* Inner content box */}
+            <div
+              className="font-dm-sans"
+              style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '28px',
+                background: 'linear-gradient(102deg, #373369 10.53%, #6D8CC1 81.23%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#FFF',
+                fontSize: '24px',
+                fontWeight: 700,
+                lineHeight: '120%',
+                position: 'relative'
+              }}
+            >
+              <span style={{ position: 'absolute', left: '30px' }}>2</span>
+              Tweak Preferences
+              {/* Chevron icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                className="absolute right-[30px] transition-all duration-300"
+                style={{
+                  transform: tweakPreferencesOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+                }}
+              >
+                <path fillRule="evenodd" clipRule="evenodd" d="M3.4301 7.5968C3.83689 7.19001 4.49644 7.19001 4.90324 7.5968L12.5 15.1936L20.0968 7.5968C20.5036 7.19001 21.1631 7.19001 21.5699 7.5968C21.9767 8.0036 21.9767 8.66315 21.5699 9.06994L13.2366 17.4033C12.8298 17.8101 12.1702 17.8101 11.7634 17.4033L3.4301 9.06994C3.0233 8.66315 3.0233 8.0036 3.4301 7.5968Z" fill="#FFF"/>
+              </svg>
+            </div>
+          </div>
+
+          {/* Dropdown for Tweak Preferences */}
+          {tweakPreferencesOpen && (
+            <p
+              className="hidden lg:block absolute font-poppins text-[21px] text-center"
+              style={{
+                width: '620px',
+                color: '#808080',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                top: 'calc(63.5px + 360px + 90px + 37px + 61px + 35px + 61px + 35px)',
+                left: 'calc(1552px - 750px - 72px)',
+                zIndex: 10
+              }}
+            >
+              Purpose adapts to your specific job criteria and location preferences for targeted matching.
+            </p>
+          )}
+
+          {/* Clickable gradient box 3 */}
+          <div
+            className="hidden lg:block absolute cursor-pointer flex-shrink-0 transition-transform duration-200 hover:scale-[1.02]"
+            style={{
+              width: '620px',
+              height: '61px',
+              top: `calc(63.5px + 360px + 90px + 37px + 61px + 35px + 61px + 35px${uploadCVOpen || tweakPreferencesOpen ? ' + 105px' : ''})`,
+              left: 'calc(1552px - 750px - 72px)',
+              borderRadius: '30px',
+              background: 'linear-gradient(137deg, #FFF 7.48%, rgba(255, 255, 255, 0.00) 94.06%)',
+              padding: '2px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.50)',
+              transition: 'top 300ms'
+            }}
+            onClick={() => setOpenIndividualBox(openIndividualBox === 3 ? null : 3)}
+          >
+            {/* Inner content box */}
+            <div
+              className="font-dm-sans"
+              style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '28px',
+                background: 'linear-gradient(102deg, #373369 10.53%, #6D8CC1 81.23%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#FFF',
+                fontSize: '24px',
+                fontWeight: 700,
+                lineHeight: '120%',
+                position: 'relative'
+              }}
+            >
+              <span style={{ position: 'absolute', left: '30px' }}>3</span>
+              Apply & Manage
+              {/* Chevron icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                className="absolute right-[30px] transition-all duration-300"
+                style={{
+                  transform: applyManageOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+                }}
+              >
+                <path fillRule="evenodd" clipRule="evenodd" d="M3.4301 7.5968C3.83689 7.19001 4.49644 7.19001 4.90324 7.5968L12.5 15.1936L20.0968 7.5968C20.5036 7.19001 21.1631 7.19001 21.5699 7.5968C21.9767 8.0036 21.9767 8.66315 21.5699 9.06994L13.2366 17.4033C12.8298 17.8101 12.1702 17.8101 11.7634 17.4033L3.4301 9.06994C3.0233 8.66315 3.0233 8.0036 3.4301 7.5968Z" fill="#FFF"/>
+              </svg>
+            </div>
+          </div>
+
+          {/* Dropdown for Apply & Manage */}
+          {applyManageOpen && (
+            <p
+              className="hidden lg:block absolute font-poppins text-[21px] text-center"
+              style={{
+                width: '620px',
+                color: '#808080',
+                fontWeight: 400,
+                lineHeight: 'normal',
+                top: 'calc(63.5px + 360px + 90px + 37px + 61px + 35px + 61px + 35px + 61px + 35px)',
+                left: 'calc(1552px - 750px - 72px)',
+                zIndex: 10
+              }}
+            >
+              Purpose finds perfect matches, apply with one tap, manage everything centrally.
+            </p>
+          )}
+
+          {/* Mobile heading */}
+          <h2 className="lg:hidden text-4xl sm:text-5xl font-dm-sans font-bold text-center text-[#454545] mb-8">
+            Automated <span className="bg-radial-1 bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">job search</span>, centralized.
+          </h2>
+
+          {/* Animated phone mockup */}
+          <img
+            src={
+              applyManageOpen
+                ? "/matches.gif"
+                : tweakPreferencesOpen
+                  ? "/preferences.gif"
+                  : uploadCVOpen
+                    ? "/Gif4.gif"
+                    : "/login.gif"
+            }
+            alt="Phone animation"
+            className="hidden lg:block absolute flex-shrink-0 transition-opacity duration-300"
+            style={{
+              top: 'calc(63.5px + 184px)',
+              left: 'calc(-104px + 212.42px)',
+              width: '294px',
+              height: '607px'
+            }}
+          />
+
+          {/* Download here text */}
+          <p
+            className="hidden lg:block absolute font-poppins text-[21px] font-semibold"
+            style={{
+              width: '166px',
+              color: '#454545',
+              lineHeight: 'normal',
+              top: 'calc(63.5px + 816px)',
+              left: 'calc(-104px + 290px)'
+            }}
+          >
+            Download here
+          </p>
+
+          {/* Google Play Button */}
+          <div
+            className="hidden lg:block absolute cursor-pointer transition-transform duration-200 hover:scale-[1.02]"
+            style={{
+              display: 'inline-flex',
+              padding: '9px 31px 12px 20px',
+              alignItems: 'center',
+              gap: '13px',
+              top: 'calc(63.5px + 859px)',
+              left: 'calc(-104px + 183px)',
+              borderRadius: '30px',
+              background: '#000',
+              zIndex: 5
+            }}
+          >
+            <img src="/playstore.svg" alt="Play Store icon" />
+            <img src="/path90.svg" alt="Google Play text" />
+          </div>
+
+          {/* App Store Button */}
+          <div
+            className="hidden lg:block absolute cursor-pointer transition-transform duration-200 hover:scale-[1.02]"
+            style={{
+              display: 'inline-flex',
+              padding: '9px 31px 12px 20px',
+              alignItems: 'center',
+              gap: '13px',
+              top: 'calc(63.5px + 859px)',
+              left: 'calc(-104px + 183px + 160px + 34px)',
+              borderRadius: '30px',
+              background: '#000',
+              zIndex: 5
+            }}
+          >
+            <img src="/Apple.svg" alt="Apple icon" />
+            <span style={{
+              color: '#FFF',
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Compact Display", "SF Pro Display", system-ui, sans-serif',
+              fontSize: '18px',
+              fontStyle: 'normal',
+              fontWeight: 500,
+              lineHeight: '100%',
+              letterSpacing: '-0.47px',
+              width: '78px',
+              display: 'flex',
+              alignItems: 'center'
+            }}>App Store</span>
+          </div>
         </div>
       </section>
 
@@ -467,8 +839,8 @@ export default function Home() {
           <h3
             className="hidden lg:block absolute w-[173px] h-[29px] flex-shrink-0 font-dm-sans text-[30px] font-bold leading-[120%] text-[#454545]"
             style={{
-              top: 'calc(63.5px + 64px)',
-              left: 'calc(96px + 95px)'
+              top: 'calc(63.5px + 60px)',
+              left: 'calc(-104px + 95px)'
             }}
           >
             Companies
