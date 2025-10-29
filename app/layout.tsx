@@ -10,7 +10,7 @@ const poppins = Poppins({
 })
 
 const dmSans = DM_Sans({
-  weight: '700',
+  weight: ['300', '400', '700'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-dm-sans',

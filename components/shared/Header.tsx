@@ -70,8 +70,8 @@ export default function Header() {
           >
             Companies
           </a>
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="hidden lg:block absolute text-xl xl:text-2xl font-bold leading-6 text-[#120C2B] hover:text-[var(--primary-button)] transition-colors opacity-0 animate-fade-in-delay-2 cursor-pointer"
             style={{
               left: '559.8px',
@@ -79,7 +79,7 @@ export default function Header() {
             }}
           >
             About us
-          </a>
+          </Link>
 
           {/* CTA Button - Absolute positioning */}
           <div
@@ -158,13 +158,13 @@ export default function Header() {
             >
               Companies
             </a>
-            <a
-              href="#about"
+            <Link
+              href="/about"
               className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[var(--primary-text)] hover:bg-[var(--hover-background)]"
               onClick={() => setMobileMenuOpen(false)}
             >
               About us
-            </a>
+            </Link>
             <Link
               href="/cta"
               className="block rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 bg-[var(--primary-button)] text-white hover:bg-[var(--primary-button-hover)] transition-colors mt-4"
