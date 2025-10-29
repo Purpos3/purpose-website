@@ -10,9 +10,7 @@ export default function Home() {
   const [dualLayerMatchingOpen, setDualLayerMatchingOpen] = useState(false)
   const [filteredCandidatesOpen, setFilteredCandidatesOpen] = useState(false)
   const [openIndividualBox, setOpenIndividualBox] = useState<null | 1 | 2 | 3>(null)
-  const [openCredentialBox, setOpenCredentialBox] = useState<null | 1 | 2 | 3>(null)
   const [diskRotation, setDiskRotation] = useState(0)
-  const [nextDiskRotation, setNextDiskRotation] = useState(0)
   const [isExpanding, setIsExpanding] = useState(false)
 
   // Derived state for compatibility
@@ -20,13 +18,8 @@ export default function Home() {
   const tweakPreferencesOpen = openIndividualBox === 2
   const applyManageOpen = openIndividualBox === 3
 
-  const credentialOneOpen = openCredentialBox === 1
-  const credentialTwoOpen = openCredentialBox === 2
-  const credentialThreeOpen = openCredentialBox === 3
-
   const handleDiskRotation = () => {
     const next = (diskRotation + 1) % 4
-    setNextDiskRotation(next)
     setIsExpanding(true)
     setTimeout(() => {
       setDiskRotation(next)
