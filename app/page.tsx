@@ -10,11 +10,24 @@ export default function Home() {
   const [dualLayerMatchingOpen, setDualLayerMatchingOpen] = useState(false)
   const [filteredCandidatesOpen, setFilteredCandidatesOpen] = useState(false)
   const [openIndividualBox, setOpenIndividualBox] = useState<null | 1 | 2 | 3>(null)
+  const [diskRotation, setDiskRotation] = useState(0)
+  const [isExpanding, setIsExpanding] = useState(false)
 
   // Derived state for compatibility
   const uploadCVOpen = openIndividualBox === 1
   const tweakPreferencesOpen = openIndividualBox === 2
   const applyManageOpen = openIndividualBox === 3
+
+  const handleDiskRotation = () => {
+    const next = (diskRotation + 1) % 4
+    setIsExpanding(true)
+    setTimeout(() => {
+      setDiskRotation(next)
+    }, 350)
+    setTimeout(() => {
+      setIsExpanding(false)
+    }, 700)
+  }
 
   return (
     <div className="min-h-screen overflow-x-hidden">
@@ -1627,16 +1640,556 @@ export default function Home() {
       {/* Separator line */}
       <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-[#5323E5]/30 to-transparent" style={{ zIndex: 10 }} />
 
-      {/* About Section */}
-      <section id="about" className="min-h-screen bg-[#F5F5F7] flex items-center justify-center px-4 sm:px-8 py-20">
-        <div className="max-w-[1552px] w-full">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-dm-sans font-bold text-center text-[#454545] mb-8">
-            <span className="bg-radial-1 bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">About</span> Purpose
+      {/* Credentials Section */}
+      <section id="credentials" className="relative w-full min-h-screen lg:h-[1800px] flex items-center justify-center px-4 sm:px-8 py-20 sm:py-24 lg:py-0 bg-[#F5F5F7]">
+        {/* Credentials content container */}
+        <div className="relative w-full max-w-[1552px] min-h-[600px] sm:min-h-[700px] lg:h-[1800px]">
+          {/* Central gradient box */}
+          <div
+            className="hidden lg:block absolute w-[1760px] h-[1500px] flex-shrink-0"
+            style={{
+              top: '63.5px',
+              left: '-104px',
+              borderRadius: '200px',
+              background: 'linear-gradient(180deg, #EEE9FC 0%, #D3E3FF 50%, #DDFCF6 100%)'
+            }}
+          />
+
+          {/* "Credentials" text inside gradient box */}
+          <h3
+            className="hidden lg:block absolute w-[200px] h-[29px] flex-shrink-0 font-dm-sans text-[30px] font-bold leading-[120%] text-[#454545]"
+            style={{
+              top: 'calc(63.5px + 60px)',
+              left: 'calc(-104px + 95px)'
+            }}
+          >
+            Credentials
+          </h3>
+
+          {/* Main heading "Why Purpose works" */}
+          <h1
+            className="hidden lg:block absolute font-dm-sans flex-shrink-0"
+            style={{
+              width: '601px',
+              height: '62.007px',
+              top: '155.11px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              color: '#454545',
+              fontSize: '64px',
+              fontStyle: 'normal',
+              fontWeight: 700,
+              lineHeight: '120%',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            Why Purpose{' '}
+            <span
+              style={{
+                background: 'radial-gradient(169.11% 136.3% at 17.79% 0%, #5323E5 0%, #5472FF 38.13%, #6DC9D8 81.27%, #72E0DA 92.1%, #6DECD3 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
+            >
+              works
+            </span>
+            .
+          </h1>
+
+          {/* "Endorsed by innovative leaders from" text */}
+          <div
+            className="hidden lg:block absolute"
+            style={{
+              width: '426px',
+              height: '19px',
+              top: 'calc(63.5px + 1300px)',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              flexShrink: 0,
+              color: '#454545',
+              fontFamily: 'Helvetica',
+              fontSize: '24px',
+              fontStyle: 'normal',
+              fontWeight: 700,
+              lineHeight: '120%',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            Endorsed by{' '}
+            <span
+              style={{
+                background: 'radial-gradient(169.11% 136.3% at 17.79% 0%, #5323E5 0%, #5472FF 38.13%, #6DC9D8 81.27%, #72E0DA 92.1%, #6DECD3 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                fontFamily: 'Helvetica',
+                fontSize: '24px',
+                fontStyle: 'normal',
+                fontWeight: 700,
+                lineHeight: '120%'
+              }}
+            >
+              innovative leaders
+            </span>{' '}
+            from
+          </div>
+
+          {/* Logo carousel wrapper - matches gradient box shape */}
+          <div
+            className="hidden lg:block absolute"
+            style={{
+              top: '63.5px',
+              left: '-104px',
+              width: '1760px',
+              height: '1500px',
+              borderRadius: '200px',
+              overflow: 'hidden',
+              pointerEvents: 'none'
+            }}
+          >
+            {/* Logo carousel */}
+            <div
+              className="absolute"
+              style={{
+                top: '1360px',
+                left: '0',
+                width: '1760px',
+                height: '60px'
+              }}
+            >
+              <div
+                className="flex items-center gap-20"
+                style={{
+                  animation: 'scroll 20s linear infinite',
+                  width: 'fit-content'
+                }}
+              >
+              {/* First set of logos */}
+              <img src="/logos/logo1.png" alt="Company logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo2.png" alt="Company logo" style={{ height: '55px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo3.png" alt="Company logo" style={{ height: '55px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo4.png" alt="Company logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo5.svg" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo6.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo7.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo8.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo9.png" alt="Company logo" style={{ height: '50px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo10.png" alt="Company logo" style={{ height: '35px', width: 'auto', objectFit: 'contain' }} />
+
+              {/* Duplicate set for seamless loop */}
+              <img src="/logos/logo1.png" alt="Company logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo2.png" alt="Company logo" style={{ height: '55px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo3.png" alt="Company logo" style={{ height: '55px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo4.png" alt="Company logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo5.svg" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo6.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo7.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo8.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo9.png" alt="Company logo" style={{ height: '50px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo10.png" alt="Company logo" style={{ height: '35px', width: 'auto', objectFit: 'contain' }} />
+
+              {/* Third set for extra smooth loop */}
+              <img src="/logos/logo1.png" alt="Company logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo2.png" alt="Company logo" style={{ height: '55px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo3.png" alt="Company logo" style={{ height: '55px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo4.png" alt="Company logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo5.svg" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo6.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo7.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo8.png" alt="Company logo" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo9.png" alt="Company logo" style={{ height: '50px', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logos/logo10.png" alt="Company logo" style={{ height: '35px', width: 'auto', objectFit: 'contain' }} />
+              </div>
+            </div>
+          </div>
+
+          {/* Disk 1 - rotates through positions based on diskRotation */}
+          <div
+            className="hidden lg:block absolute cursor-pointer"
+            onClick={handleDiskRotation}
+            style={{
+              width: '481.025px',
+              height: '464.085px',
+              // Position 0 = back center (513px, 50%, z=0) - upper center, ALWAYS behind
+              // Position 1 = left (591px, -280px, z=1)
+              // Position 2 = front center (669px, 50%, z=3) - lower center, ALWAYS on front
+              // Position 3 = right (591px, +280px, z=1)
+              // Disk 1 is at position: diskRotation % 4 = diskRotation
+              top: isExpanding
+                ? (diskRotation === 0 ? '313px' : diskRotation === 1 ? '591px' : diskRotation === 2 ? '869px' : '591px')
+                : (diskRotation === 0 ? '513px' : diskRotation === 1 ? '591px' : diskRotation === 2 ? '669px' : '591px'),
+              left: isExpanding
+                ? (diskRotation === 0 ? '50%' : diskRotation === 1 ? 'calc(50% - 480px)' : diskRotation === 2 ? '50%' : 'calc(50% + 480px)')
+                : (diskRotation === 0 ? '50%' : diskRotation === 1 ? 'calc(50% - 280px)' : diskRotation === 2 ? '50%' : 'calc(50% + 280px)'),
+              transform: 'translateX(-50%) rotate(-78.832deg)',
+              flexShrink: 0,
+              borderRadius: '481.025px',
+              border: '2px solid #FFF',
+              background: 'linear-gradient(90deg, #3783AC 45%, #1D0A6F 100%)',
+              boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+              zIndex: diskRotation === 0 ? 0 : diskRotation === 1 ? 1 : diskRotation === 2 ? 3 : 1,
+              transition: 'top 350ms ease-in-out, left 350ms ease-in-out'
+            }}
+          >
+            {/* Text on Disk 1 - SVG with gradient stroke */}
+            <svg
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '125px',
+                height: '84px',
+                transform: 'translate(-50%, -50%) rotate(78.832deg) translateY(-130px)',
+                overflow: 'visible'
+              }}
+            >
+              <defs>
+                {/* Glass fill gradient - 146deg */}
+                <linearGradient id="glassFill" x1="-84.14%" y1="0%" x2="122.33%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+                </linearGradient>
+                {/* Glass stroke gradient - 137deg */}
+                <linearGradient id="glassStroke" x1="7.48%" y1="0%" x2="94.06%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+                </linearGradient>
+                {/* Drop shadow filter */}
+                <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="rgba(0, 0, 0, 0.25)" />
+                </filter>
+              </defs>
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fontFamily="Helvetica"
+                fontSize="70"
+                fontWeight="700"
+                fill="url(#glassFill)"
+                stroke="url(#glassStroke)"
+                strokeWidth="1"
+                filter="url(#textShadow)"
+              >
+                10x
+              </text>
+            </svg>
+            {/* Description on Disk 1 */}
+            <div
+              className="font-dm-sans"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '310px',
+                textAlign: 'center',
+                color: 'rgba(255, 255, 255, 0.80)',
+                textShadow: '0 4px 4px rgba(0, 0, 0, 0.25)',
+                fontSize: '32px',
+                fontStyle: 'normal',
+                fontWeight: 300,
+                lineHeight: '120%',
+                transform: 'translate(-50%, -50%) rotate(78.832deg) translateY(50px)'
+              }}
+            >
+              faster than the<br />
+              current application<br />
+              process through job<br />
+              boards and other<br />
+              career sites.
+            </div>
+          </div>
+
+          {/* Disk 2 - starts at position 1 (left) */}
+          <div
+            className="hidden lg:block absolute cursor-pointer"
+            onClick={handleDiskRotation}
+            style={{
+              width: '481.025px',
+              height: '464.085px',
+              // Disk 2 is at position: (diskRotation + 1) % 4
+              // diskRotation=0: pos=1 (left, z=1)
+              // diskRotation=1: pos=2 (front center, z=3)
+              // diskRotation=2: pos=3 (right, z=1)
+              // diskRotation=3: pos=0 (back center, z=0)
+              top: isExpanding
+                ? (diskRotation === 0 ? '591px' : diskRotation === 1 ? '869px' : diskRotation === 2 ? '591px' : '313px')
+                : (diskRotation === 0 ? '591px' : diskRotation === 1 ? '669px' : diskRotation === 2 ? '591px' : '513px'),
+              left: isExpanding
+                ? (diskRotation === 0 ? 'calc(50% - 480px)' : diskRotation === 1 ? '50%' : diskRotation === 2 ? 'calc(50% + 480px)' : '50%')
+                : (diskRotation === 0 ? 'calc(50% - 280px)' : diskRotation === 1 ? '50%' : diskRotation === 2 ? 'calc(50% + 280px)' : '50%'),
+              transform: 'translateX(-50%) rotate(-78.832deg)',
+              flexShrink: 0,
+              borderRadius: '481.025px',
+              border: '2px solid #FFF',
+              background: 'linear-gradient(90deg, #3783AC 45%, #1D0A6F 100%)',
+              boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+              zIndex: diskRotation === 0 ? 1 : diskRotation === 1 ? 3 : diskRotation === 2 ? 1 : 0,
+              transition: 'top 350ms ease-in-out, left 350ms ease-in-out'
+            }}
+          >
+            {/* Text on Disk 2 - SVG with gradient stroke */}
+            <svg
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '125px',
+                height: '84px',
+                transform: 'translate(-50%, -50%) rotate(78.832deg) translateY(-130px)',
+                overflow: 'visible'
+              }}
+            >
+              <defs>
+                <linearGradient id="glassFill2" x1="-84.14%" y1="0%" x2="122.33%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="glassStroke2" x1="7.48%" y1="0%" x2="94.06%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+                </linearGradient>
+                <filter id="textShadow2" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="rgba(0, 0, 0, 0.25)" />
+                </filter>
+              </defs>
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fontFamily="Helvetica"
+                fontSize="70"
+                fontWeight="700"
+                fill="url(#glassFill2)"
+                stroke="url(#glassStroke2)"
+                strokeWidth="1"
+                filter="url(#textShadow2)"
+              >
+                5x
+              </text>
+            </svg>
+            {/* Description on Disk 2 */}
+            <div
+              className="font-dm-sans"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '310px',
+                textAlign: 'center',
+                color: 'rgba(255, 255, 255, 0.80)',
+                textShadow: '0 4px 4px rgba(0, 0, 0, 0.25)',
+                fontSize: '32px',
+                fontStyle: 'normal',
+                fontWeight: 300,
+                lineHeight: '120%',
+                transform: 'translate(-50%, -50%) rotate(78.832deg) translateY(50px)'
+              }}
+            >
+              better<br />
+              application-<br />
+              to-hire and<br />
+              interview<br />
+              conversion.
+            </div>
+          </div>
+
+          {/* Disk 3 - starts at position 3 (right) */}
+          <div
+            className="hidden lg:block absolute cursor-pointer"
+            onClick={handleDiskRotation}
+            style={{
+              width: '481.025px',
+              height: '464.085px',
+              // Disk 3 is at position: (diskRotation + 3) % 4
+              // diskRotation=0: pos=3 (right, z=1)
+              // diskRotation=1: pos=0 (back center, z=0)
+              // diskRotation=2: pos=1 (left, z=1)
+              // diskRotation=3: pos=2 (front center, z=3)
+              top: isExpanding
+                ? (diskRotation === 0 ? '591px' : diskRotation === 1 ? '313px' : diskRotation === 2 ? '591px' : '869px')
+                : (diskRotation === 0 ? '591px' : diskRotation === 1 ? '513px' : diskRotation === 2 ? '591px' : '669px'),
+              left: isExpanding
+                ? (diskRotation === 0 ? 'calc(50% + 480px)' : diskRotation === 1 ? '50%' : diskRotation === 2 ? 'calc(50% - 480px)' : '50%')
+                : (diskRotation === 0 ? 'calc(50% + 280px)' : diskRotation === 1 ? '50%' : diskRotation === 2 ? 'calc(50% - 280px)' : '50%'),
+              transform: 'translateX(-50%) rotate(-78.832deg)',
+              flexShrink: 0,
+              borderRadius: '481.025px',
+              border: '2px solid #FFF',
+              background: 'linear-gradient(90deg, #3783AC 45%, #1D0A6F 100%)',
+              boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+              zIndex: diskRotation === 0 ? 1 : diskRotation === 1 ? 0 : diskRotation === 2 ? 1 : 3,
+              transition: 'top 350ms ease-in-out, left 350ms ease-in-out'
+            }}
+          >
+            {/* Text on Disk 3 - SVG with gradient stroke */}
+            <svg
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '125px',
+                height: '84px',
+                transform: 'translate(-50%, -50%) rotate(78.832deg) translateY(-130px)',
+                overflow: 'visible'
+              }}
+            >
+              <defs>
+                <linearGradient id="glassFill3" x1="-84.14%" y1="0%" x2="122.33%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="glassStroke3" x1="7.48%" y1="0%" x2="94.06%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+                </linearGradient>
+                <filter id="textShadow3" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="rgba(0, 0, 0, 0.25)" />
+                </filter>
+              </defs>
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fontFamily="Helvetica"
+                fontSize="70"
+                fontWeight="700"
+                fill="url(#glassFill3)"
+                stroke="url(#glassStroke3)"
+                strokeWidth="1"
+                filter="url(#textShadow3)"
+              >
+                &gt;20
+              </text>
+            </svg>
+            {/* Description on Disk 3 */}
+            <div
+              className="font-dm-sans"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '310px',
+                textAlign: 'center',
+                color: 'rgba(255, 255, 255, 0.80)',
+                textShadow: '0 4px 4px rgba(0, 0, 0, 0.25)',
+                fontSize: '32px',
+                fontStyle: 'normal',
+                fontWeight: 300,
+                lineHeight: '120%',
+                transform: 'translate(-50%, -50%) rotate(78.832deg) translateY(50px)'
+              }}
+            >
+              B2B beta<br />
+              customers<br />
+              already<br />
+              onboarded.
+            </div>
+          </div>
+
+          {/* Disk 4 - starts at position 2 (front) */}
+          <div
+            className="hidden lg:block absolute cursor-pointer"
+            onClick={handleDiskRotation}
+            style={{
+              width: '481.025px',
+              height: '464.085px',
+              // Disk 4 is at position: (diskRotation + 2) % 4
+              // diskRotation=0: pos=2 (front center, z=3)
+              // diskRotation=1: pos=3 (right, z=1)
+              // diskRotation=2: pos=0 (back center, z=0)
+              // diskRotation=3: pos=1 (left, z=1)
+              top: isExpanding
+                ? (diskRotation === 0 ? '869px' : diskRotation === 1 ? '591px' : diskRotation === 2 ? '313px' : '591px')
+                : (diskRotation === 0 ? '669px' : diskRotation === 1 ? '591px' : diskRotation === 2 ? '513px' : '591px'),
+              left: isExpanding
+                ? (diskRotation === 0 ? '50%' : diskRotation === 1 ? 'calc(50% + 480px)' : diskRotation === 2 ? '50%' : 'calc(50% - 480px)')
+                : (diskRotation === 0 ? '50%' : diskRotation === 1 ? 'calc(50% + 280px)' : diskRotation === 2 ? '50%' : 'calc(50% - 280px)'),
+              transform: 'translateX(-50%) rotate(-78.832deg)',
+              flexShrink: 0,
+              borderRadius: '481.025px',
+              border: '2px solid #FFF',
+              background: 'linear-gradient(90deg, #3783AC 45%, #1D0A6F 100%)',
+              boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+              zIndex: diskRotation === 0 ? 3 : diskRotation === 1 ? 1 : diskRotation === 2 ? 0 : 1,
+              transition: 'top 350ms ease-in-out, left 350ms ease-in-out'
+            }}
+          >
+            {/* Text on Disk 4 - SVG with gradient stroke */}
+            <svg
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '125px',
+                height: '84px',
+                transform: 'translate(-50%, -50%) rotate(78.832deg) translateY(-130px)',
+                overflow: 'visible'
+              }}
+            >
+              <defs>
+                <linearGradient id="glassFill4" x1="-84.14%" y1="0%" x2="122.33%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+                </linearGradient>
+                <linearGradient id="glassStroke4" x1="7.48%" y1="0%" x2="94.06%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+                </linearGradient>
+                <filter id="textShadow4" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="rgba(0, 0, 0, 0.25)" />
+                </filter>
+              </defs>
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fontFamily="Helvetica"
+                fontSize="70"
+                fontWeight="700"
+                fill="url(#glassFill4)"
+                stroke="url(#glassStroke4)"
+                strokeWidth="1"
+                filter="url(#textShadow4)"
+              >
+                &gt;90%
+              </text>
+            </svg>
+            {/* Description on Disk 4 */}
+            <div
+              className="font-dm-sans"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '310px',
+                textAlign: 'center',
+                color: 'rgba(255, 255, 255, 0.80)',
+                textShadow: '0 4px 4px rgba(0, 0, 0, 0.25)',
+                fontSize: '32px',
+                fontStyle: 'normal',
+                fontWeight: 300,
+                lineHeight: '120%',
+                transform: 'translate(-50%, -50%) rotate(78.832deg) translateY(50px)'
+              }}
+            >
+              of job seekers<br />
+              would use<br />
+              Purpose to find<br />
+              fitting<br />
+              opportunities.
+            </div>
+          </div>
+
+          {/* Mobile heading */}
+          <h2 className="lg:hidden text-4xl sm:text-5xl font-dm-sans font-bold text-center text-[#454545] mb-8">
+            <span className="bg-radial-1 bg-clip-text text-transparent [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">Credentials</span>
           </h2>
-          <p className="text-lg sm:text-xl text-center text-[#454545CC] font-poppins">
-            Revolutionizing recruitment with next-generation technology.
-          </p>
-          {/* Add more content here */}
         </div>
       </section>
 
